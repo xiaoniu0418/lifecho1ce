@@ -1,0 +1,740 @@
+{
+  "cells": [
+    {
+      "type": "起點",
+      "subtype": "",
+      "icon": "🏁",
+      "narrative": "起點！先調整心情，準備開始人生棋局。",
+      "options": [
+        {
+          "title": "準備出發！",
+          "money": 0,
+          "happy": 0
+        },
+        {
+          "title": "深呼吸一下",
+          "money": 0,
+          "happy": 1
+        },
+        {
+          "title": "跟朋友打招呼",
+          "money": 0,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "早餐",
+      "icon": "🍔",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "早餐店三明治＋奶茶",
+          "money": -55,
+          "happy": 3
+        },
+        {
+          "title": "便利商店飯糰＋豆漿",
+          "money": -45,
+          "happy": 2
+        },
+        {
+          "title": "自己帶吐司",
+          "money": -10,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "午餐",
+      "icon": "🍕",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "學餐便當",
+          "money": -75,
+          "happy": 2
+        },
+        {
+          "title": "跟同學吃麥當勞",
+          "money": -160,
+          "happy": 4
+        },
+        {
+          "title": "省錢吃7-11微波餐",
+          "money": -85,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "晚餐",
+      "icon": "🍟",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "便當店雙主菜",
+          "money": -120,
+          "happy": 3
+        },
+        {
+          "title": "家裡吃（省錢）",
+          "money": 0,
+          "happy": 2
+        },
+        {
+          "title": "夜市小吃",
+          "money": -150,
+          "happy": 4
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "宵夜",
+      "icon": "🌭",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "鹹酥雞＋飲料",
+          "money": -160,
+          "happy": 3
+        },
+        {
+          "title": "泡麵＋蛋",
+          "money": -45,
+          "happy": 1
+        },
+        {
+          "title": "忍住不吃（明天更有精神）",
+          "money": 0,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "飲料",
+      "icon": "🥪",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "手搖飲（半糖少冰）",
+          "money": -65,
+          "happy": 3
+        },
+        {
+          "title": "超商罐裝茶",
+          "money": -35,
+          "happy": 1
+        },
+        {
+          "title": "白開水",
+          "money": 0,
+          "happy": 0
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "甜點",
+      "icon": "🥙",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "85°C 蛋糕切片",
+          "money": -95,
+          "happy": 2
+        },
+        {
+          "title": "冰淇淋",
+          "money": -60,
+          "happy": 2
+        },
+        {
+          "title": "不買甜點（存錢）",
+          "money": 0,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "炸物",
+      "icon": "🌮",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "雞排",
+          "money": -85,
+          "happy": 2
+        },
+        {
+          "title": "薯條",
+          "money": -55,
+          "happy": 1
+        },
+        {
+          "title": "不吃炸物（健康＋1）",
+          "money": 0,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "速食",
+      "icon": "🌯",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "肯德基套餐",
+          "money": -180,
+          "happy": 4
+        },
+        {
+          "title": "麥當勞單點",
+          "money": -120,
+          "happy": 3
+        },
+        {
+          "title": "回家煮麵",
+          "money": -30,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "便當",
+      "icon": "🥗",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "自助餐夾好夾滿",
+          "money": -130,
+          "happy": 3
+        },
+        {
+          "title": "便當＋湯",
+          "money": -110,
+          "happy": 2
+        },
+        {
+          "title": "只買飯＋青菜（省錢）",
+          "money": -60,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "拉麵",
+      "icon": "🍜",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "拉麵加麵",
+          "money": -220,
+          "happy": 5
+        },
+        {
+          "title": "一般拉麵",
+          "money": -180,
+          "happy": 4
+        },
+        {
+          "title": "不吃拉麵（改吃學餐）",
+          "money": -75,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "韓式",
+      "icon": "🍝",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "韓式炸雞",
+          "money": -250,
+          "happy": 5
+        },
+        {
+          "title": "泡菜鍋",
+          "money": -220,
+          "happy": 4
+        },
+        {
+          "title": "部隊鍋（多人分）",
+          "money": -180,
+          "happy": 4
+        }
+      ]
+    },
+    {
+      "type": "穿搭",
+      "subtype": "",
+      "icon": "🍣",
+      "narrative": "同學都穿得很有型，你也想搭配一下。",
+      "options": [
+        {
+          "title": "UNIQLO 上衣",
+          "money": -490,
+          "happy": 3
+        },
+        {
+          "title": "NET 特價",
+          "money": -299,
+          "happy": 2
+        },
+        {
+          "title": "二手衣／交換",
+          "money": -80,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "穿搭",
+      "subtype": "",
+      "icon": "🍤",
+      "narrative": "同學都穿得很有型，你也想搭配一下。",
+      "options": [
+        {
+          "title": "UNIQLO 上衣",
+          "money": -490,
+          "happy": 3
+        },
+        {
+          "title": "NET 特價",
+          "money": -299,
+          "happy": 2
+        },
+        {
+          "title": "二手衣／交換",
+          "money": -80,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "穿搭",
+      "subtype": "",
+      "icon": "🍱",
+      "narrative": "同學都穿得很有型，你也想搭配一下。",
+      "options": [
+        {
+          "title": "UNIQLO 上衣",
+          "money": -490,
+          "happy": 3
+        },
+        {
+          "title": "NET 特價",
+          "money": -299,
+          "happy": 2
+        },
+        {
+          "title": "二手衣／交換",
+          "money": -80,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "住房",
+      "subtype": "",
+      "icon": "🥡",
+      "narrative": "回到房間，突然想讓生活更舒服一點。",
+      "options": [
+        {
+          "title": "房間收納盒＋小擺飾",
+          "money": -220,
+          "happy": 2
+        },
+        {
+          "title": "換枕頭（睡更好）",
+          "money": -350,
+          "happy": 4
+        },
+        {
+          "title": "不買（整理就好）",
+          "money": 0,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "住房",
+      "subtype": "",
+      "icon": "🍛",
+      "narrative": "回到房間，突然想讓生活更舒服一點。",
+      "options": [
+        {
+          "title": "房間收納盒＋小擺飾",
+          "money": -220,
+          "happy": 2
+        },
+        {
+          "title": "換枕頭（睡更好）",
+          "money": -350,
+          "happy": 4
+        },
+        {
+          "title": "不買（整理就好）",
+          "money": 0,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "交通",
+      "subtype": "",
+      "icon": "🍲",
+      "narrative": "要趕上行程，你會怎麼移動？",
+      "options": [
+        {
+          "title": "公車/捷運",
+          "money": -25,
+          "happy": 0
+        },
+        {
+          "title": "YouBike",
+          "money": -10,
+          "happy": 1
+        },
+        {
+          "title": "Uber（趕時間）",
+          "money": -180,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "交通",
+      "subtype": "",
+      "icon": "🥘",
+      "narrative": "要趕上行程，你會怎麼移動？",
+      "options": [
+        {
+          "title": "公車/捷運",
+          "money": -25,
+          "happy": 0
+        },
+        {
+          "title": "YouBike",
+          "money": -10,
+          "happy": 1
+        },
+        {
+          "title": "Uber（趕時間）",
+          "money": -180,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "娛樂",
+      "subtype": "",
+      "icon": "🍰",
+      "narrative": "放學/週末想放鬆一下，你會選？",
+      "options": [
+        {
+          "title": "看電影",
+          "money": -330,
+          "happy": 5
+        },
+        {
+          "title": "KTV 兩小時",
+          "money": -250,
+          "happy": 5
+        },
+        {
+          "title": "打球/走路（免費）",
+          "money": 0,
+          "happy": 3
+        }
+      ]
+    },
+    {
+      "type": "娛樂",
+      "subtype": "",
+      "icon": "🍩",
+      "narrative": "放學/週末想放鬆一下，你會選？",
+      "options": [
+        {
+          "title": "看電影",
+          "money": -330,
+          "happy": 5
+        },
+        {
+          "title": "KTV 兩小時",
+          "money": -250,
+          "happy": 5
+        },
+        {
+          "title": "打球/走路（免費）",
+          "money": 0,
+          "happy": 3
+        }
+      ]
+    },
+    {
+      "type": "娛樂",
+      "subtype": "",
+      "icon": "🧋",
+      "narrative": "放學/週末想放鬆一下，你會選？",
+      "options": [
+        {
+          "title": "看電影",
+          "money": -330,
+          "happy": 5
+        },
+        {
+          "title": "KTV 兩小時",
+          "money": -250,
+          "happy": 5
+        },
+        {
+          "title": "打球/走路（免費）",
+          "money": 0,
+          "happy": 3
+        }
+      ]
+    },
+    {
+      "type": "娛樂",
+      "subtype": "",
+      "icon": "☕",
+      "narrative": "放學/週末想放鬆一下，你會選？",
+      "options": [
+        {
+          "title": "看電影",
+          "money": -330,
+          "happy": 5
+        },
+        {
+          "title": "KTV 兩小時",
+          "money": -250,
+          "happy": 5
+        },
+        {
+          "title": "打球/走路（免費）",
+          "money": 0,
+          "happy": 3
+        }
+      ]
+    },
+    {
+      "type": "交通",
+      "subtype": "",
+      "icon": "🥤",
+      "narrative": "要趕上行程，你會怎麼移動？",
+      "options": [
+        {
+          "title": "公車/捷運",
+          "money": -25,
+          "happy": 0
+        },
+        {
+          "title": "YouBike",
+          "money": -10,
+          "happy": 1
+        },
+        {
+          "title": "Uber（趕時間）",
+          "money": -180,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "住房",
+      "subtype": "",
+      "icon": "🧃",
+      "narrative": "回到房間，突然想讓生活更舒服一點。",
+      "options": [
+        {
+          "title": "房間收納盒＋小擺飾",
+          "money": -220,
+          "happy": 2
+        },
+        {
+          "title": "換枕頭（睡更好）",
+          "money": -350,
+          "happy": 4
+        },
+        {
+          "title": "不買（整理就好）",
+          "money": 0,
+          "happy": 1
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "火鍋",
+      "icon": "🍵",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "個人小火鍋",
+          "money": -230,
+          "happy": 4
+        },
+        {
+          "title": "吃到飽火鍋",
+          "money": -450,
+          "happy": 6
+        },
+        {
+          "title": "改吃便當（省）",
+          "money": -110,
+          "happy": 2
+        }
+      ]
+    },
+    {
+      "type": "外食",
+      "subtype": "聚餐",
+      "icon": "🍺",
+      "narrative": "你肚子有點餓，眼前有好幾個選擇…",
+      "options": [
+        {
+          "title": "同學聚餐 AA",
+          "money": -300,
+          "happy": 6
+        },
+        {
+          "title": "生日請客（人情）",
+          "money": -500,
+          "happy": 7
+        },
+        {
+          "title": "只去聊天不吃（尷尬）",
+          "money": 0,
+          "happy": -1
+        }
+      ]
+    },
+    {
+      "type": "打工",
+      "subtype": "",
+      "icon": "🍷",
+      "narrative": "你收到打工邀請，賺錢但會消耗體力。",
+      "options": [
+        {
+          "title": "超商晚班（賺錢但累）",
+          "money": 220,
+          "happy": -1
+        },
+        {
+          "title": "家教一小時",
+          "money": 400,
+          "happy": -2
+        },
+        {
+          "title": "發傳單（風吹日曬）",
+          "money": 180,
+          "happy": -1
+        }
+      ]
+    },
+    {
+      "type": "打工",
+      "subtype": "",
+      "icon": "🎮",
+      "narrative": "你收到打工邀請，賺錢但會消耗體力。",
+      "options": [
+        {
+          "title": "超商晚班（賺錢但累）",
+          "money": 220,
+          "happy": -1
+        },
+        {
+          "title": "家教一小時",
+          "money": 400,
+          "happy": -2
+        },
+        {
+          "title": "發傳單（風吹日曬）",
+          "money": 180,
+          "happy": -1
+        }
+      ]
+    },
+    {
+      "type": "打工",
+      "subtype": "",
+      "icon": "🎧",
+      "narrative": "你收到打工邀請，賺錢但會消耗體力。",
+      "options": [
+        {
+          "title": "超商晚班（賺錢但累）",
+          "money": 220,
+          "happy": -1
+        },
+        {
+          "title": "家教一小時",
+          "money": 400,
+          "happy": -2
+        },
+        {
+          "title": "發傳單（風吹日曬）",
+          "money": 180,
+          "happy": -1
+        }
+      ]
+    },
+    {
+      "type": "機會",
+      "subtype": "",
+      "icon": "🎲",
+      "narrative": "突然出現一個機會！把握看看？",
+      "options": [
+        {
+          "title": "社團比賽得名（獎金）",
+          "money": 600,
+          "happy": 4
+        },
+        {
+          "title": "二手平台賣出舊物",
+          "money": 300,
+          "happy": 2
+        },
+        {
+          "title": "抽到演唱會票（轉賣）",
+          "money": 800,
+          "happy": 3
+        }
+      ]
+    },
+    {
+      "type": "命運",
+      "subtype": "",
+      "icon": "🌀",
+      "narrative": "命運來敲門…有好有壞，選吧。",
+      "options": [
+        {
+          "title": "手機摔到螢幕裂（維修）",
+          "money": -1200,
+          "happy": -3
+        },
+        {
+          "title": "感冒看診買藥",
+          "money": -450,
+          "happy": -1
+        },
+        {
+          "title": "意外收到紅包",
+          "money": 500,
+          "happy": 3
+        }
+      ]
+    }
+  ]
+}

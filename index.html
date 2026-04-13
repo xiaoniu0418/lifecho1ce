@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <title>抉擇天秤｜開始</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./插件/bootstrap-5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="stylesheet" href="./插件/fontswesome/fontawesome-free-6.6.0-web/css/all.min.css">
+</head>
+
+<body class="body_bg">
+  <div class="page-wrap">
+    <div class="hero">
+      <div class="brand">
+        <div class="brand-badge">⚖</div>
+        <div>
+          <div class="brand-title">《抉擇天秤》</div>
+          <div class="brand-sub">青少年理性消費意識培力工具</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="start-grid">
+      <!-- 左：介紹 -->
+      <div class="cardx">
+        <div class="cardx-hd">
+          <span class="pill">遊戲說明</span>
+        </div>
+        <div class="cardx-bd">
+          <h3 class="h3 mb-2">在每一格做選擇，累積金錢與幸福值</h3>
+          <div class="muted small mb-3">走完三圈回到起點會觸發結局</div>
+
+          <hr class="soft-hr">
+
+          <div class="muted mb-3">
+            你會在不同生活情境中做決定：外食、通勤、讀書、打工、聚會…
+            每次選擇都會影響「金錢」與「幸福值」，最後看你走到哪種人生結局。
+          </div>
+
+          <div class="mini-cards">
+            <div class="mini">
+              <div class="mini-t">目標</div>
+              <div class="mini-v">走完 3 圈</div>
+            </div>
+            <div class="mini">
+              <div class="mini-t">失敗條件</div>
+              <div class="mini-v">金錢歸零破產</div>
+            </div>
+            <div class="mini">
+              <div class="mini-t">結局評分</div>
+              <div class="mini-v">金錢 × 幸福</div>
+            </div>
+          </div>
+
+          <div class="tips mt-3">
+            <div class="tip">
+              <span class="tag">提示</span>
+              每回合一定要選一個選項，才會輪到下一位玩家。
+            </div>
+            <div class="tip">
+              <span class="tag">提示</span>
+              金錢歸零會破產出局，但其他玩家仍可繼續。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右：設定 -->
+      <div class="cardx">
+        <div class="cardx-hd">
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="pill pill-green">設定</span>
+            <span class="muted small">Step 1：選擇人數　Step 2：初始金錢</span>
+          </div>
+        </div>
+
+        <div class="cardx-bd">
+          <div class="mode-grid mb-3" id="modeGrid">
+            <button class="mode-btn" data-p="1">
+              <div class="mode-num">1</div>
+              <div>
+                <div class="mode-title">單人模式</div>
+                <div class="mode-sub">自己挑戰看看</div>
+              </div>
+              <div class="mode-tag">P1</div>
+            </button>
+
+            <button class="mode-btn" data-p="2">
+              <div class="mode-num">2</div>
+              <div>
+                <div class="mode-title">雙人模式</div>
+                <div class="mode-sub">輪流競爭更刺激</div>
+              </div>
+              <div class="mode-tag">P1~P2</div>
+            </button>
+
+            <button class="mode-btn" data-p="3">
+              <div class="mode-num">3</div>
+              <div>
+                <div class="mode-title">三人模式</div>
+                <div class="mode-sub">事件影響更明顯</div>
+              </div>
+              <div class="mode-tag">P1~P3</div>
+            </button>
+
+            <button class="mode-btn" data-p="4">
+              <div class="mode-num">4</div>
+              <div>
+                <div class="mode-title">四人模式</div>
+                <div class="mode-sub">最熱鬧最好玩</div>
+              </div>
+              <div class="mode-tag">P1~P4</div>
+            </button>
+          </div>
+
+          <div class="select-row mb-3">
+            <div class="muted">已選擇：</div>
+            <div class="picked" id="pickedPlayers">尚未選</div>
+          </div>
+
+          <hr class="soft-hr">
+
+          <div class="muted small mb-2">
+            <strong>Step 2：</strong>設定初始金錢（範圍 1 ~ 3000）
+          </div>
+
+          <div class="money-box mb-3">
+            <div class="money-hd mb-2">
+              <div class="money-title">初始金錢</div>
+              <div class="money-value"><span id="moneyVal">500</span><span class="money-unit">$</span></div>
+            </div>
+
+            <input type="range" class="form-range" min="1" max="3000" value="500" id="moneyRange">
+
+            <div class="money-scale mt-1">
+              <span>1</span>
+              <span>1500</span>
+              <span>3000</span>
+            </div>
+
+            <div class="muted small mt-2">建議：500～1200 比較好玩（不會太快破產）</div>
+          </div>
+
+          <button class="btn-start" id="btnStart" disabled>
+            開始遊戲 <span class="small muted">(設定完成才能開始)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./插件/jquery-3.7.1.min.js"></script>
+  <script src="./插件/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./lifegame.js?v=20260223"></script>
+</body>
+
+</html>

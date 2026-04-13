@@ -1,0 +1,1025 @@
+/* =========================
+   人生棋局 - 共用樣式（暗色科技）
+   ========================= */
+:root{
+  --brandA:#4f46e5;
+  --brandB:#22c55e;
+  --bg0:#050a15;
+  --bg1:#0b1223;
+  --card:rgba(255,255,255,.06);
+  --card2:rgba(255,255,255,.08);
+  --line:rgba(255,255,255,.10);
+  --muted:rgba(255,255,255,.70);
+  --muted2:rgba(255,255,255,.55);
+  --shadow:0 20px 45px rgba(0,0,0,.35);
+  --radius:22px;
+}
+
+*{ box-sizing:border-box; }
+body.body_bg{
+  min-height:100vh;
+  background:
+    radial-gradient(1200px 520px at 20% 10%, rgba(79,70,229,.25), transparent 60%),
+    radial-gradient(900px 520px at 80% 90%, rgba(34,197,94,.16), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  color:#fff;
+  overflow-x:hidden;
+}
+
+.page-wrap{
+  padding:18px 14px;
+  max-width:1400px;
+  margin:0 auto;
+}
+
+.hero{ padding:10px 6px 18px; }
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.brand-badge{
+  width:46px;height:46px;
+  border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg, rgba(79,70,229,.95), rgba(34,197,94,.50));
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 10px 26px rgba(0,0,0,.35);
+  font-weight:900;
+}
+.brand-title{
+  font-size:46px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.brand.mini .brand-title{ font-size:30px; letter-spacing:.02em; }
+.brand-sub{ margin-top:6px; color:var(--muted); font-weight:600; }
+
+/* 卡片 */
+.cardx{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.cardx-hd{
+  padding:14px 16px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+  background:linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,0));
+}
+.cardx-bd{ padding:16px; }
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.pill-green{
+  background:rgba(34,197,94,.18);
+  border-color:rgba(34,197,94,.24);
+}
+
+.muted{ color:var(--muted); }
+.small{ font-size:.9rem; }
+.soft-hr{ border-color:rgba(255,255,255,.12); }
+.h3{ font-weight:900; margin:0; }
+
+/* 開始頁 */
+.start-grid{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap:16px;
+  align-items:stretch;
+}
+@media (max-width: 1100px){
+  .start-grid{ grid-template-columns: 1fr; }
+  .brand-title{ font-size:40px; }
+}
+.mini-cards{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:10px;
+}
+@media (max-width: 520px){
+  .mini-cards{ grid-template-columns: 1fr; }
+}
+.mini{
+  padding:12px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.18);
+}
+.mini-t{ color:var(--muted2); font-weight:800; letter-spacing:.08em; font-size:.85rem; }
+.mini-v{ font-weight:900; margin-top:6px; }
+
+.tips .tip{
+  padding:10px 12px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.14);
+  margin-top:10px;
+}
+.tips .tag{
+  display:inline-block;
+  padding:2px 10px;
+  border-radius:999px;
+  background:rgba(79,70,229,.22);
+  border:1px solid rgba(79,70,229,.24);
+  margin-right:8px;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+.mode-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+}
+@media (max-width: 520px){
+  .mode-grid{ grid-template-columns: 1fr; }
+}
+.mode-btn{
+  width:100%;
+  text-align:left;
+  padding:12px 12px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.22);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  position:relative;
+  transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.mode-btn:hover{
+  transform:translateY(-1px);
+  border-color:rgba(34,197,94,.35);
+  box-shadow:0 16px 36px rgba(0,0,0,.35);
+}
+.mode-btn.active{
+  outline:2px solid rgba(34,197,94,.55);
+  border-color:rgba(34,197,94,.35);
+}
+.mode-num{
+  width:44px;height:44px;
+  border-radius:14px;
+  display:grid;place-items:center;
+  font-weight:900;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+}
+.mode-title{ font-weight:900; letter-spacing:.02em; }
+.mode-sub{ color:var(--muted); font-size:.9rem; }
+.mode-tag{
+  position:absolute;
+  right:12px; top:12px;
+  color:var(--muted2);
+  font-weight:800;
+}
+
+.select-row{ display:flex; align-items:center; gap:10px; }
+.picked{
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.08);
+  font-weight:900;
+}
+
+.money-box{
+  padding:12px 12px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.18);
+}
+.money-hd{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.money-title{ font-weight:900; letter-spacing:.02em; }
+.money-value{
+  font-weight:900;
+  padding:6px 10px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.08);
+}
+.money-unit{ opacity:.8; margin-left:4px; }
+.money-scale{ display:flex; justify-content:space-between; color:var(--muted2); font-size:.85rem; }
+
+.btn-start{
+  width:100%;
+  border:0;
+  border-radius:999px;
+  padding:16px 18px;
+  font-weight:900;
+  letter-spacing:.1em;
+  background:linear-gradient(90deg, rgba(34,197,94,.85), rgba(34,197,94,.65));
+  box-shadow:0 18px 40px rgba(0,0,0,.35);
+  color:#06210f;
+  transition:filter .12s ease, transform .12s ease, opacity .12s ease;
+}
+.btn-start:hover{ filter:brightness(1.03); transform:translateY(-1px); }
+.btn-start:disabled{ opacity:.45; cursor:not-allowed; transform:none; }
+
+.dice-box{
+  display:inline-grid;
+  place-items:center;
+  width:36px;height:36px;
+  border-radius:12px;
+  margin-left:10px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.16);
+  font-weight:900;
+}
+
+/* 遊戲棋盤：外框走一圈 */
+.board-area{
+  position:relative;
+  width:100%;
+  aspect-ratio: 16/10;
+  min-height:320px;
+  max-height:80vh;
+  border-radius:22px;
+  background:rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.10);
+  overflow:hidden;
+}
+
+/* 格子（沒有再包一層框） */
+.cell{
+  position:absolute;
+  width:80px;
+  height:64px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:8px;
+  font-weight:900;
+  letter-spacing:.02em;
+  user-select:none;
+}
+.cell.start{ outline:2px solid rgba(34,197,94,.55); }
+.cell.special{ outline:2px solid rgba(79,70,229,.55); }
+
+/* 棋子點點 */
+.token{
+  position:absolute;
+  width:10px;height:10px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:0 8px 14px rgba(0,0,0,.35);
+  transform:translate(-50%,-50%);
+}
+
+.logbox{
+  min-height:90px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.16);
+  padding:10px 12px;
+  color:var(--muted);
+  font-weight:700;
+}
+
+.token{
+  position:absolute;
+  width:18px;height:18px;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,.92);
+  box-shadow:
+    0 10px 18px rgba(0,0,0,.45),
+    0 0 0 3px rgba(255,255,255,.10),
+    0 0 14px rgba(255,255,255,.14);
+  transform:translate(-50%,-50%);
+  transition: left .45s cubic-bezier(.2,.8,.2,1), top .45s cubic-bezier(.2,.8,.2,1), transform .15s ease;
+  z-index: 5;
+  pointer-events:none;
+}
+/* 棋子內的小號碼（可辨識是哪位玩家） */
+.token::after{
+  content: attr(data-p);
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:11px;
+  color:#04110a;
+}
+@media (max-width: 768px){
+  .token{ width:16px; height:16px; }
+  .token::after{ font-size:10px; }
+}
+/* ===========================
+   動畫效果（擲骰 / 走格子）
+   =========================== */
+@keyframes diceShake{
+  0%{ transform: translateY(0) rotate(0deg); }
+  15%{ transform: translateY(-2px) rotate(-6deg); }
+  30%{ transform: translateY(1px) rotate(6deg); }
+  45%{ transform: translateY(-2px) rotate(-6deg); }
+  60%{ transform: translateY(1px) rotate(6deg); }
+  75%{ transform: translateY(-1px) rotate(-3deg); }
+  100%{ transform: translateY(0) rotate(0deg); }
+}
+@keyframes diceRoll{
+  0%{ transform: scale(1); filter:brightness(1); }
+  50%{ transform: scale(1.08); filter:brightness(1.12); }
+  100%{ transform: scale(1); filter:brightness(1); }
+}
+.btn-start.rolling{ animation: diceRoll .55s ease; }
+.btn-start.rolling .dice-box{ animation: diceShake .55s ease; }
+
+.cell.step{
+  outline: 2px solid rgba(34,197,94,.65);
+  box-shadow: 0 0 0 4px rgba(34,197,94,.10), 0 0 22px rgba(34,197,94,.18);
+}
+.cell.landing{
+  outline: 2px solid rgba(255,255,255,.70);
+  box-shadow: 0 0 0 5px rgba(255,255,255,.10), 0 0 26px rgba(255,255,255,.22);
+}
+
+/* ===========================
+   骰子點數顯示（用點點，不用文字）
+   =========================== */
+.dice-box{
+  position: relative;
+  display:inline-grid;
+  place-items:center;
+  width:38px;height:38px;
+  border-radius:12px;
+  margin-left:10px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  overflow:hidden;
+}
+.dice-face{
+  width:100%;
+  height:100%;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap:2px;
+  padding:6px;
+}
+.pip{
+  width:6px;height:6px;
+  border-radius:50%;
+  background:rgba(255,255,255,.92);
+  box-shadow:0 0 10px rgba(255,255,255,.18);
+  opacity:0;
+}
+.pip.on{ opacity:1; }
+@media (max-width: 768px){
+  .dice-box{ width:34px;height:34px; border-radius:11px; }
+  .dice-face{ padding:5px; gap:2px; }
+  .pip{ width:5px;height:5px; }
+}
+
+/* ===========================
+   手機 / 平板響應式優化
+   =========================== */
+@media (max-width: 768px){
+  .page-wrap{ padding:10px 8px; }
+  .brand-title{ font-size:26px; }
+  .brand.mini .brand-title{ font-size:22px; }
+
+  .board-area{
+    aspect-ratio: 1/1;
+    min-height:280px;
+    max-height:70vh;
+  }
+
+  .cell{
+    font-size:12px;
+    border-radius:10px;
+    padding:6px;
+    letter-spacing:.04em;
+  }
+
+  .cardx{ border-radius:16px; }
+  .btn-start{ padding:14px; font-size:14px; }
+
+  .mini-cards{ grid-template-columns:1fr; }
+  .mode-grid{ grid-template-columns:1fr; }
+}
+
+/* ✅ 擲骰子按鈕置中（文字+骰子一起置中） */
+.btn-start{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+/* ✅ 擲骰子字放大 */
+.btn-start{
+  font-size:18px;
+  font-weight:900;
+}
+@media (max-width: 768px){
+  .btn-start{ font-size:16px; }
+}
+
+/* ✅ 輪到誰骰：他棋子所在格子高亮 */
+.cell.turn{
+  outline: 2px solid rgba(34,197,94,.85);
+  box-shadow: 0 0 0 6px rgba(34,197,94,.12), 0 0 28px rgba(34,197,94,.22);
+}
+
+/* ✅ 初始骰子圖示顯示更清楚 */
+.dice-box i{
+  font-size:20px;
+  color:rgba(255,255,255,.92);
+  text-shadow:0 0 14px rgba(255,255,255,.18);
+}
+
+.dice-fallback{font-size:18px; opacity:.35; margin-left:-18px; filter:blur(.1px);}
+
+/* ✅ 玩家狀態水平排列 */
+.player-status-horizontal{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+.player-status-horizontal .player-card{
+  flex:1 1 220px;
+}
+@media (max-width:768px){
+  .player-status-horizontal{
+    flex-direction:column;
+  }
+}
+
+
+/* ===========================
+   ✅ 玩家狀態：專業版型（水平卡片 Grid）
+   - 桌機：自動多欄（最小 240px）
+   - 平板：2 欄
+   - 手機：1 欄
+   - 目前回合卡：外框發光
+   =========================== */
+#playersPanel .players-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:14px;
+}
+@media (max-width: 992px){
+  #playersPanel .players-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 576px){
+  #playersPanel .players-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+#playersPanel .player-card{
+  padding:12px 14px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.10));
+  box-shadow: 0 10px 26px rgba(0,0,0,.22);
+  overflow:hidden;
+  position:relative;
+}
+
+#playersPanel .player-card.is-out{
+  opacity:.55;
+  filter:saturate(.8);
+}
+
+#playersPanel .player-card.is-active{
+  border-color: rgba(34,197,94,.45);
+  box-shadow: 0 0 0 6px rgba(34,197,94,.10), 0 16px 34px rgba(0,0,0,.28);
+}
+
+#playersPanel .player-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+#playersPanel .player-name{
+  font-weight:900;
+  letter-spacing:.03em;
+}
+
+#playersPanel .dot{
+  width:12px;height:12px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.55);
+  flex:0 0 auto;
+}
+
+#playersPanel .kv{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 12px;
+  margin-top:10px;
+}
+
+#playersPanel .pill-kv{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  font-weight:800;
+  font-size:13px;
+}
+
+#playersPanel .pill-kv b{
+  font-weight:900;
+  color:#fff;
+}
+
+#playersPanel .money{
+  border-color: rgba(34,197,94,.28);
+  background: rgba(34,197,94,.14);
+  color:#d1fae5;
+}
+
+
+/* ===============================
+   ✅ 科技感炫光版（Neon / Cyber Glow）
+   =============================== */
+:root{
+  --neoA:#00e5ff;
+  --neoB:#7c3aed;
+  --neoC:#22c55e;
+  --neoR:#ff3d71;
+  --panel: rgba(10, 16, 28, .62);
+  --panel2: rgba(10, 16, 28, .38);
+  --glowA: 0 0 18px rgba(0,229,255,.45);
+  --glowB: 0 0 18px rgba(124,58,237,.45);
+}
+
+body.body_bg{
+  background:
+    radial-gradient(900px 520px at 15% 18%, rgba(0,229,255,.22), transparent 60%),
+    radial-gradient(900px 520px at 85% 88%, rgba(124,58,237,.20), transparent 58%),
+    radial-gradient(680px 420px at 55% 28%, rgba(34,197,94,.10), transparent 60%),
+    linear-gradient(180deg, #060a12, #070b14 50%, #060a12);
+}
+
+.page-card, .cardx, .panel-card, .glassCard, .modalCard{
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow:
+    0 26px 70px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+.page-card::before, .cardx::before, .panel-card::before, .glassCard::before, .modalCard::before{
+  content:"";
+  position:absolute; inset:-1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(0,229,255,.55), rgba(124,58,237,.55), rgba(34,197,94,.30));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events:none;
+  opacity:.55;
+}
+
+button, .btn, .pill, .soft-btn{
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+button:hover, .btn:hover, .pill:hover, .soft-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+#btnRoll{
+  background: linear-gradient(135deg, rgba(0,229,255,.20), rgba(34,197,94,.18));
+  border: 1px solid rgba(0,229,255,.28);
+  box-shadow: var(--glowA);
+  position: relative;
+  overflow: hidden;
+}
+#btnRoll::after{
+  content:"";
+  position:absolute; inset:-60% -40%;
+  background: radial-gradient(circle, rgba(0,229,255,.25), transparent 55%);
+  transform: translateX(-40%);
+  animation: neoSweep 2.8s linear infinite;
+  pointer-events:none;
+}
+@keyframes neoSweep{
+  0%{ transform: translateX(-55%); opacity:.25;}
+  50%{ opacity:.45;}
+  100%{ transform: translateX(55%); opacity:.25;}
+}
+
+/* ====== 格子炫光 ====== */
+.cell, .tile{
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+.cell.start, .tile.start{
+  border-color: rgba(34,197,94,.35);
+  box-shadow: 0 0 18px rgba(34,197,94,.35), inset 0 1px 0 rgba(255,255,255,.10);
+}
+.cell.chance, .tile.chance{
+  border-color: rgba(0,229,255,.45);
+  box-shadow: 0 0 20px rgba(0,229,255,.35), inset 0 1px 0 rgba(255,255,255,.10);
+  background: linear-gradient(180deg, rgba(0,229,255,.10), rgba(255,255,255,.05));
+}
+.cell.destiny, .tile.destiny{
+  border-color: rgba(124,58,237,.45);
+  box-shadow: 0 0 20px rgba(124,58,237,.35), inset 0 1px 0 rgba(255,255,255,.10);
+  background: linear-gradient(180deg, rgba(124,58,237,.12), rgba(255,255,255,.05));
+}
+
+/* icon 更亮 */
+.tIcon, .cellIcon, .tileIcon{
+  filter: drop-shadow(0 0 10px rgba(0,229,255,.35));
+}
+
+/* 圖表底更像 HUD */
+#rsCanvas{
+  width: 100%;
+  height: 380px;
+  background: rgba(0,0,0,.14);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+
+/* ✅ 擲骰子文字更清楚 */
+#btnRoll, #btnRoll *{
+  color: rgba(255,255,255,.96) !important;
+  font-weight: 900 !important;
+  letter-spacing: .6px;
+  text-shadow:
+    0 2px 10px rgba(0,0,0,.65),
+    0 0 14px rgba(0,229,255,.28);
+}
+
+
+/* ✅ 隱藏提示字（避免畫面出現『格子直接定位...』） */
+.boardHint, .board-hint, .hintText, .boardNote{
+  display:none !important;
+}
+
+
+/* 🌌 星空背景層 */
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom, #050b18 0%, #02040a 100%);
+}
+
+
+/* ===== 最終穩定版：滿版棋盤 + 中央操作 ===== */
+@media (min-width: 992px){
+  .game-main,
+  .game-players{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .game-side{ display:none; }
+  .page-wrap{ max-width: 1680px; }
+  .board-area{
+    height: min(72vh, 760px);
+    min-height: 560px;
+    max-height: none;
+    aspect-ratio: auto;
+  }
+}
+
+.board-hud{
+  position:absolute;
+  inset:0;
+  z-index:20;
+  pointer-events:none;
+}
+.board-hud-main{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:min(360px, 42vw);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  pointer-events:none;
+}
+.board-turn-card,
+.board-roll-card,
+.board-log-card{ pointer-events:auto; }
+.board-turn-card{
+  width:100%;
+  padding:14px 18px;
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(7,14,30,.88), rgba(3,9,20,.82));
+  border:1px solid rgba(0,229,255,.24);
+  box-shadow:0 16px 34px rgba(0,0,0,.32), 0 0 24px rgba(0,229,255,.10);
+  backdrop-filter: blur(8px);
+}
+.board-turn-card #turnStatus{ margin:0; }
+.board-roll-card{ display:flex; justify-content:center; }
+.board-roll-card #btnRoll{
+  width:auto;
+  min-width:220px;
+  font-size:18px;
+  padding:14px 24px;
+  border-radius:999px;
+  box-shadow:0 14px 34px rgba(0,0,0,.34), 0 0 20px rgba(0,229,255,.16);
+}
+.board-log-card{
+  position:absolute;
+  left:50%;
+  bottom:16px;
+  transform:translateX(-50%);
+  width:min(760px, calc(100% - 40px));
+  pointer-events:none;
+}
+.board-log-card #logBox{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:14px 18px;
+  background:linear-gradient(180deg, rgba(8,12,28,.82), rgba(4,8,18,.78));
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 10px 24px rgba(0,0,0,.28);
+}
+
+.cell{
+  border-radius:20px;
+  padding:10px;
+  gap:6px;
+}
+.cell .cell-ic{
+  font-size:26px;
+  line-height:1;
+}
+.cell .cell-t{
+  font-size:18px;
+  line-height:1.12;
+  text-shadow:0 2px 10px rgba(0,0,0,.45);
+}
+@media (max-width: 991.98px){
+  .cell .cell-ic{ font-size:22px; }
+  .cell .cell-t{ font-size:15px; }
+}
+
+
+/* ===== V2：玩家資訊與擲骰子左右排列，訊息不擋格子 ===== */
+@media (min-width: 992px){
+  .board-hud-main{
+    top:52%;
+    width:min(760px, 74vw);
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+  }
+  .board-turn-card{
+    width:min(420px, 42vw);
+    padding:12px 16px;
+  }
+  .board-roll-card{
+    flex:0 0 auto;
+    align-self:center;
+  }
+  .board-roll-card #btnRoll{
+    min-width:180px;
+    font-size:16px;
+    padding:12px 20px;
+  }
+  .board-log-below{
+    margin-top:14px;
+  }
+  .board-log-below #logBox{
+    min-height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:12px 16px;
+    background:linear-gradient(180deg, rgba(8,12,28,.82), rgba(4,8,18,.78));
+    border:1px solid rgba(255,255,255,.10);
+    box-shadow:0 10px 24px rgba(0,0,0,.28);
+  }
+  .board-log-card{ display:none !important; }
+  .cell .cell-ic{ font-size:24px; }
+  .cell .cell-t{ font-size:16px; }
+}
+
+
+/* ===== V3：圖案放大、玩家資訊卡縮小、訊息放到擲骰子下方 ===== */
+@media (min-width: 992px){
+  .board-hud-main{
+    top:52%;
+    width:min(760px, 74vw);
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+  }
+
+  /* 玩家資訊卡縮小（卡片縮小，不是文字縮小） */
+  .board-turn-card{
+    width:min(330px, 34vw);
+    padding:10px 14px;
+  }
+
+  /* 右側擲骰子與訊息直向排列 */
+  .board-roll-stack{
+    width:min(300px, 28vw);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    flex:0 0 auto;
+  }
+
+  .board-roll-card{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .board-roll-card #btnRoll{
+    min-width:210px;
+    font-size:16px;
+    padding:12px 20px;
+  }
+
+  /* 訊息框放到擲骰子正下方，不重疊 */
+  .board-log-under-roll{
+    width:100%;
+    display:block;
+  }
+
+  .board-log-under-roll #logBox{
+    min-height:72px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:12px 14px;
+    background:linear-gradient(180deg, rgba(8,12,28,.86), rgba(4,8,18,.82));
+    border:1px solid rgba(255,255,255,.10);
+    box-shadow:0 10px 24px rgba(0,0,0,.28);
+    border-radius:20px;
+    font-size:14px;
+    line-height:1.45;
+  }
+
+  .board-log-card,
+  .board-log-below{
+    display:none !important;
+  }
+
+  /* 圖案放大、文字不要太大，避免擋格子 */
+  .cell{
+    padding:8px;
+    gap:4px;
+  }
+  .cell .cell-ic{
+    font-size:32px !important;
+    line-height:1;
+  }
+  .cell .cell-t{
+    font-size:13px !important;
+    line-height:1.08;
+    font-weight:900;
+  }
+}
+
+/* 棋子移動慢一點，畫面更清楚 */
+.token{
+  transition: left .7s cubic-bezier(.2,.8,.2,1), top .7s cubic-bezier(.2,.8,.2,1), transform .15s ease;
+}
+
+/* 小螢幕也避免字太大 */
+@media (max-width: 991.98px){
+  .cell .cell-ic{
+    font-size:26px !important;
+  }
+  .cell .cell-t{
+    font-size:12px !important;
+  }
+}
+
+/* ===== V10 滿分版：保留以前格子圖案、放大秤子、玩家資訊單一卡片 ===== */
+
+/* LOGO 左邊秤子放大 */
+.brand-badge{
+  width:62px !important;
+  height:62px !important;
+  border-radius:18px !important;
+}
+.brand-badge{
+  font-size:34px !important;
+  line-height:1 !important;
+}
+.brand-title{
+  font-size:52px !important;
+}
+.brand.mini .brand-title{
+  font-size:34px !important;
+}
+
+/* 玩家資訊只保留外層卡片，不要內層第二個框線 */
+#turnStatus{
+  border:none !important;
+  box-shadow:none !important;
+  outline:none !important;
+  background:transparent !important;
+  padding:0 !important;
+  margin:0 !important;
+  border-radius:0 !important;
+}
+
+/* 玩家資訊卡縮小一點，不要占兩個格子寬 */
+@media (min-width: 992px){
+  .board-hud-main{
+    width:min(700px, 68vw) !important;
+    gap:16px !important;
+  }
+
+  .board-turn-card{
+    width:min(300px, 30vw) !important;
+    padding:12px 14px !important;
+    border-radius:22px !important;
+  }
+
+  .board-roll-stack{
+    width:min(280px, 26vw) !important;
+  }
+
+  .board-roll-card #btnRoll{
+    min-width:200px !important;
+  }
+
+  .board-log-under-roll #logBox{
+    min-height:82px !important;
+    font-size:15px !important;
+    line-height:1.5 !important;
+  }
+}
+
+/* 格子維持以前圖案，字稍微清楚一點 */
+.cell{
+  padding:8px !important;
+  gap:4px !important;
+}
+.cell .cell-ic{
+  font-size:32px !important;
+  line-height:1 !important;
+}
+.cell .cell-t{
+  font-size:14px !important;
+  line-height:1.08 !important;
+  font-weight:900 !important;
+  text-shadow:0 2px 8px rgba(0,0,0,.42) !important;
+}
+
+@media (max-width: 991.98px){
+  .cell .cell-ic{
+    font-size:26px !important;
+  }
+  .cell .cell-t{
+    font-size:12px !important;
+  }
+  .brand-badge{
+    width:56px !important;
+    height:56px !important;
+    font-size:30px !important;
+  }
+}
